@@ -1,0 +1,304 @@
+[2025-09-03 10:21:16,979: INFO: main : welcome to your first project]
+[2025-09-04 11:49:33,093: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 11:54:47,590: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 11:54:56,152: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:07:02,280: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:09:38,448: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:09:45,650: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:11:23,156: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:11:29,970: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:12:28,414: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:13:43,374: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:18:58,929: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:19:14,936: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:21:43,690: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:23:28,515: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:24:28,547: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:31:32,318: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:33:32,398: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:35:11,193: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:40:09,961: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:44:09,513: INFO: common : yaml file: config\config.yaml loaded succesfully]
+[2025-09-04 12:45:06,475: INFO: common : created directory at: artifacts]
+[2025-09-04 12:45:06,482: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-04 12:47:18,471: INFO: common : created directory at: artifacts]
+[2025-09-04 12:47:18,473: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-04 12:47:20,027: INFO: 106677922 : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D81A:218E7D:CA940:224F21:68B93CFE
+Accept-Ranges: bytes
+Date: Thu, 04 Sep 2025 07:17:19 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830021-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1756970239.459845,VS0,VE258
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 664ad38a5e0be5483c07d41480cf168f0288518f
+Expires: Thu, 04 Sep 2025 07:22:19 GMT
+Source-Age: 0
+
+]
+[2025-09-04 13:27:49,764: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-04 13:27:49,807: INFO: common : created directory at: artifacts]
+[2025-09-04 13:27:49,809: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-04 13:27:51,410: INFO: data_ingestion : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D81A:218E7D:CA940:224F21:68B93CFE
+Accept-Ranges: bytes
+Date: Thu, 04 Sep 2025 07:57:51 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830037-CCU
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1756972671.909358,VS0,VE283
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 99bcd7f3ee77343a72dba50862aaf891f53f7d18
+Expires: Thu, 04 Sep 2025 08:02:51 GMT
+Source-Age: 0
+
+]
+[2025-09-04 13:27:51,441: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-04 15:12:36,756: INFO: common : created directory at: artifacts]
+[2025-09-04 15:12:36,758: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-04 15:24:27,368: INFO: common : created directory at: artifacts]
+[2025-09-04 15:24:27,371: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-04 15:24:34,231: INFO: common : created directory at: artifacts]
+[2025-09-04 15:24:34,234: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-04 15:35:26,678: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-04 15:35:26,683: INFO: common : created directory at: artifacts]
+[2025-09-04 15:35:26,684: ERROR: main : 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 8, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    data_ingestion_config=config.get_data_ingestion_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2025-09-04 15:36:11,280: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-04 15:36:11,288: INFO: common : created directory at: artifacts]
+[2025-09-04 15:36:11,289: ERROR: main : 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 8, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    data_ingestion_config=config.get_data_ingestion_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2025-09-04 15:37:11,185: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-04 15:37:11,192: INFO: common : created directory at: artifacts]
+[2025-09-04 15:37:11,193: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-04 15:37:12,603: INFO: data_ingestion : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 47D8:1B0BD4:106721:29E027:68B964CE
+Accept-Ranges: bytes
+Date: Thu, 04 Sep 2025 10:07:12 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830025-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1756980432.039267,VS0,VE285
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 2302d2d384ed228548fbc1bbd2e74aa98db65ec0
+Expires: Thu, 04 Sep 2025 10:12:12 GMT
+Source-Age: 0
+
+]
+[2025-09-04 15:37:12,645: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-04 15:37:12,645: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-04 15:37:12,656: INFO: common : created directory at: artifacts]
+[2025-09-04 15:37:12,657: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-04 15:37:12,657: ERROR: main : local variable 'data_validation' referenced before assignment]
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 19, in <module>
+    data_ingestion.initiate_data_validation()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\data_validation_pipeline.py", line 13, in initiate_data_validation
+    data_validation = data_validation(config=data_validation_config)
+UnboundLocalError: local variable 'data_validation' referenced before assignment
+[2025-09-04 15:38:23,664: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-04 15:38:23,670: INFO: common : created directory at: artifacts]
+[2025-09-04 15:38:23,670: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-04 15:38:23,671: INFO: data_ingestion : File already exists]
+[2025-09-04 15:38:23,676: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-04 15:38:23,676: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-04 15:38:23,683: INFO: common : created directory at: artifacts]
+[2025-09-04 15:38:23,684: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-04 15:38:23,697: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 10:59:31,059: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 11:01:58,902: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 11:02:00,615: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-05 11:02:00,634: INFO: common : created directory at: artifacts]
+[2025-09-05 11:02:00,635: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-05 11:02:00,635: INFO: data_ingestion : File already exists]
+[2025-09-05 11:02:00,764: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:02:00,765: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-05 11:02:00,769: INFO: common : created directory at: artifacts]
+[2025-09-05 11:02:00,770: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-05 11:02:00,790: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:02:00,791: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-05 11:02:00,795: INFO: common : created directory at: artifacts]
+[2025-09-05 11:02:00,795: ERROR: main : 'ConfigurationManager' object has no attribute 'get_data_tranformation_config']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 31, in <module>
+    obj.initiate_data_transformation()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation_config=config.get_data_tranformation_config()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_tranformation_config'. Did you mean: 'get_data_transformation_config'?
+[2025-09-05 11:04:18,336: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 11:04:19,501: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-05 11:04:19,506: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:19,506: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-05 11:04:19,506: INFO: data_ingestion : File already exists]
+[2025-09-05 11:04:19,508: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:04:19,509: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-05 11:04:19,514: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:19,515: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-05 11:04:19,526: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:04:19,526: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-05 11:04:19,532: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:19,532: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-05 11:04:19,532: ERROR: main : 'DataTransformation' object has no attribute 'train_test_splitting']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 31, in <module>
+    obj.initiate_data_transformation()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\data_transformation_pipeline.py", line 15, in initiate_data_transformation
+    data_transformation.train_test_splitting()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataTransformation' object has no attribute 'train_test_splitting'. Did you mean: 'train_test_spliting'?
+[2025-09-05 11:04:40,536: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 11:04:41,642: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-05 11:04:41,647: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:41,648: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-05 11:04:41,648: INFO: data_ingestion : File already exists]
+[2025-09-05 11:04:41,652: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:04:41,652: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-05 11:04:41,658: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:41,659: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-05 11:04:41,670: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 11:04:41,670: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-05 11:04:41,675: INFO: common : created directory at: artifacts]
+[2025-09-05 11:04:41,676: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-05 11:04:41,803: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-05 11:04:41,804: INFO: data_transformation : (1199, 12)]
+[2025-09-05 11:04:41,804: INFO: data_transformation : (400, 12)]
+[2025-09-05 11:04:41,805: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:39:43,788: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 12:39:45,808: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-05 12:39:45,814: INFO: common : created directory at: artifacts]
+[2025-09-05 12:39:45,814: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-05 12:39:45,815: INFO: data_ingestion : File already exists]
+[2025-09-05 12:39:45,820: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:39:45,821: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-05 12:39:45,828: INFO: common : created directory at: artifacts]
+[2025-09-05 12:39:45,829: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-05 12:39:45,842: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:39:45,843: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-05 12:39:45,849: INFO: common : created directory at: artifacts]
+[2025-09-05 12:39:45,850: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-05 12:39:45,893: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-05 12:39:45,893: INFO: data_transformation : (1199, 12)]
+[2025-09-05 12:39:45,894: INFO: data_transformation : (400, 12)]
+[2025-09-05 12:39:45,894: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:39:45,894: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-05 12:39:45,899: INFO: common : created directory at: artifacts]
+[2025-09-05 12:39:45,971: ERROR: main : [Errno 2] No such file or directory: 'artifacts/model_trainer\\model.joblib']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 44, in <module>
+    obj.initiate_model_training()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_trainer_pipeline.py", line 16, in initiate_model_training
+    model_trainer.train()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_trainer.py", line 24, in train
+    joblib.dump(lr,os.path.join(self.config.root_dir, self.config.model_name))
+  File "C:\Users\hp\anaconda3\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/model_trainer\\model.joblib'
+[2025-09-05 12:41:46,160: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-05 12:41:47,808: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-05 12:41:47,817: INFO: common : created directory at: artifacts]
+[2025-09-05 12:41:47,817: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-05 12:41:47,818: INFO: data_ingestion : File already exists]
+[2025-09-05 12:41:47,823: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:41:47,823: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-05 12:41:47,830: INFO: common : created directory at: artifacts]
+[2025-09-05 12:41:47,831: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-05 12:41:47,847: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:41:47,847: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-05 12:41:47,854: INFO: common : created directory at: artifacts]
+[2025-09-05 12:41:47,855: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-05 12:41:47,898: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-05 12:41:47,899: INFO: data_transformation : (1199, 12)]
+[2025-09-05 12:41:47,900: INFO: data_transformation : (400, 12)]
+[2025-09-05 12:41:47,900: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-05 12:41:47,901: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-05 12:41:47,906: INFO: common : created directory at: artifacts]
+[2025-09-05 12:41:47,907: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-05 12:41:47,964: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
