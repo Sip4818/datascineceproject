@@ -302,3 +302,758 @@ x==========x]
 [2025-09-05 12:41:47,964: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
 
 x==========x]
+[2025-09-06 11:15:24,178: INFO: common : created directory at: artifacts]
+[2025-09-06 11:15:24,196: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 11:31:58,345: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 11:32:04,106: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 11:32:04,120: INFO: common : created directory at: artifacts]
+[2025-09-06 11:32:04,122: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 11:32:05,395: INFO: data_ingestion : artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: EEC2:220E79:5C098:11E6BC:68BBCE5C
+Accept-Ranges: bytes
+Date: Sat, 06 Sep 2025 06:02:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830042-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1757138525.254084,VS0,VE298
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 29e37cd92db2f10badbabd2c2cece01db7fa2f96
+Expires: Sat, 06 Sep 2025 06:07:05 GMT
+Source-Age: 0
+
+]
+[2025-09-06 11:32:05,523: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 11:32:05,524: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 11:32:05,541: INFO: common : created directory at: artifacts]
+[2025-09-06 11:32:05,543: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 11:32:05,566: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 11:32:05,566: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 11:32:05,578: INFO: common : created directory at: artifacts]
+[2025-09-06 11:32:05,579: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 11:32:05,627: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 11:32:05,627: INFO: data_transformation : (1199, 12)]
+[2025-09-06 11:32:05,628: INFO: data_transformation : (400, 12)]
+[2025-09-06 11:32:05,628: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 11:32:05,628: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 11:32:05,634: INFO: common : created directory at: artifacts]
+[2025-09-06 11:32:05,634: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 11:32:05,702: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 11:32:05,703: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 11:32:05,710: INFO: common : created directory at: artifacts]
+[2025-09-06 11:32:05,711: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 11:32:07,819: ERROR: main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 34, in log_into_mlflow
+    with mlflow.start_run():
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 474, in start_run
+    active_run_obj = client.create_run(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 435, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 161, in create_run
+    return self.store.create_run(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 272, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 310, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 404 != 200. Response body: ''
+[2025-09-06 11:37:34,278: INFO: common : created directory at: artifacts]
+[2025-09-06 11:37:34,281: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 11:40:09,795: INFO: common : created directory at: artifacts]
+[2025-09-06 11:40:09,798: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 11:40:10,330: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 11:41:51,638: INFO: common : created directory at: artifacts]
+[2025-09-06 11:41:51,640: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 11:41:52,131: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:02:21,830: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:02:27,735: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:02:27,742: INFO: common : created directory at: artifacts]
+[2025-09-06 12:02:27,743: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:02:27,744: INFO: data_ingestion : File already exists]
+[2025-09-06 12:02:27,747: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:02:27,747: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:02:27,753: INFO: common : created directory at: artifacts]
+[2025-09-06 12:02:27,753: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:02:27,761: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:02:27,762: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:02:27,768: INFO: common : created directory at: artifacts]
+[2025-09-06 12:02:27,769: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:02:27,818: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:02:27,818: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:02:27,818: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:02:27,818: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:02:27,819: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:02:27,825: INFO: common : created directory at: artifacts]
+[2025-09-06 12:02:27,826: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:02:27,884: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:02:27,884: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:02:27,891: INFO: common : created directory at: artifacts]
+[2025-09-06 12:02:27,894: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:02:29,851: ERROR: main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 35, in log_into_mlflow
+    with mlflow.start_run():
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 474, in start_run
+    active_run_obj = client.create_run(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 435, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 161, in create_run
+    return self.store.create_run(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 272, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 310, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2025-09-06 12:04:31,116: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:04:35,961: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:04:35,970: INFO: common : created directory at: artifacts]
+[2025-09-06 12:04:35,970: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:04:35,971: INFO: data_ingestion : File already exists]
+[2025-09-06 12:04:35,976: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:04:35,976: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:04:35,980: INFO: common : created directory at: artifacts]
+[2025-09-06 12:04:35,982: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:04:35,989: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:04:35,990: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:04:35,998: INFO: common : created directory at: artifacts]
+[2025-09-06 12:04:36,000: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:04:36,052: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:04:36,052: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:04:36,052: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:04:36,052: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:04:36,053: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:04:36,061: INFO: common : created directory at: artifacts]
+[2025-09-06 12:04:36,061: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:04:36,117: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:04:36,117: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:04:36,123: INFO: common : created directory at: artifacts]
+[2025-09-06 12:04:36,123: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:04:37,850: ERROR: main : API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 35, in log_into_mlflow
+    with mlflow.start_run():
+         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 474, in start_run
+    active_run_obj = client.create_run(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 435, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 161, in create_run
+    return self.store.create_run(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 272, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 310, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 403 != 200. Response body: ''
+[2025-09-06 12:09:01,510: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:09:06,634: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:09:06,641: INFO: common : created directory at: artifacts]
+[2025-09-06 12:09:06,642: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:09:06,642: INFO: data_ingestion : File already exists]
+[2025-09-06 12:09:06,644: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:09:06,645: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:09:06,651: INFO: common : created directory at: artifacts]
+[2025-09-06 12:09:06,651: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:09:06,659: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:09:06,660: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:09:06,666: INFO: common : created directory at: artifacts]
+[2025-09-06 12:09:06,667: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:09:06,717: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:09:06,717: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:09:06,718: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:09:06,719: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:09:06,719: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:09:06,726: INFO: common : created directory at: artifacts]
+[2025-09-06 12:09:06,727: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:09:06,779: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:09:06,780: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:09:06,787: INFO: common : created directory at: artifacts]
+[2025-09-06 12:09:06,788: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:09:08,489: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:09:15,342: ERROR: main : INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 52, in log_into_mlflow
+    mlflow.sklearn.log_model(
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 60, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-09-06 12:09:55,604: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:10:00,922: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:10:00,926: INFO: common : created directory at: artifacts]
+[2025-09-06 12:10:00,927: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:10:00,927: INFO: data_ingestion : File already exists]
+[2025-09-06 12:10:00,929: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:10:00,930: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:10:00,938: INFO: common : created directory at: artifacts]
+[2025-09-06 12:10:00,939: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:10:00,949: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:10:00,949: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:10:00,957: INFO: common : created directory at: artifacts]
+[2025-09-06 12:10:00,958: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:10:00,993: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:10:00,993: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:10:00,994: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:10:00,995: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:10:00,995: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:10:01,001: INFO: common : created directory at: artifacts]
+[2025-09-06 12:10:01,002: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:10:01,044: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:10:01,044: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:10:01,051: INFO: common : created directory at: artifacts]
+[2025-09-06 12:10:01,051: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:10:02,707: WARNING: connectionpool : Retrying (Retry(total=6, connect=6, read=7, redirect=7, status=7)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000233E358F530>: Failed to resolve 'dagshub.com' ([Errno 11001] getaddrinfo failed)")': /Sip4818/datascineceproject.mlflow/api/2.0/mlflow/runs/create]
+[2025-09-06 12:10:48,714: WARNING: connectionpool : Retrying (Retry(total=5, connect=5, read=7, redirect=7, status=7)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000233E45BCA10>: Failed to resolve 'dagshub.com' ([Errno 11001] getaddrinfo failed)")': /Sip4818/datascineceproject.mlflow/api/2.0/mlflow/runs/create]
+[2025-09-06 12:10:57,186: WARNING: connectionpool : Retrying (Retry(total=4, connect=4, read=7, redirect=7, status=7)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000233E45BCB60>: Failed to resolve 'dagshub.com' ([Errno 11001] getaddrinfo failed)")': /Sip4818/datascineceproject.mlflow/api/2.0/mlflow/runs/create]
+[2025-09-06 12:11:27,380: WARNING: connectionpool : Retrying (Retry(total=3, connect=3, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000233E45BCCB0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine')': /Sip4818/datascineceproject.mlflow/api/2.0/mlflow/runs/create]
+[2025-09-06 12:11:28,043: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:11:35,321: ERROR: main : INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 52, in log_into_mlflow
+    mlflow.sklearn.log_model(
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 60, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-09-06 12:12:00,893: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:12:04,372: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:12:04,469: INFO: common : created directory at: artifacts]
+[2025-09-06 12:12:04,469: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:12:04,470: INFO: data_ingestion : File already exists]
+[2025-09-06 12:12:04,480: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:12:04,481: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:12:04,486: INFO: common : created directory at: artifacts]
+[2025-09-06 12:12:04,487: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:12:04,494: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:12:04,495: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:12:04,499: INFO: common : created directory at: artifacts]
+[2025-09-06 12:12:04,501: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:12:04,527: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:12:04,527: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:12:04,528: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:12:04,528: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:12:04,528: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:12:04,533: INFO: common : created directory at: artifacts]
+[2025-09-06 12:12:04,533: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:12:04,561: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:12:04,561: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:12:04,566: INFO: common : created directory at: artifacts]
+[2025-09-06 12:12:04,567: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:12:05,964: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:12:12,442: ERROR: main : INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 52, in log_into_mlflow
+    mlflow.sklearn.log_model(
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 60, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-09-06 12:13:40,139: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:13:43,148: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:13:43,152: INFO: common : created directory at: artifacts]
+[2025-09-06 12:13:43,152: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:13:43,153: INFO: data_ingestion : File already exists]
+[2025-09-06 12:13:43,156: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:13:43,156: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:13:43,162: INFO: common : created directory at: artifacts]
+[2025-09-06 12:13:43,162: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:13:43,169: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:13:43,170: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:13:43,174: INFO: common : created directory at: artifacts]
+[2025-09-06 12:13:43,175: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:13:43,201: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:13:43,201: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:13:43,202: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:13:43,202: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:13:43,203: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:13:43,208: INFO: common : created directory at: artifacts]
+[2025-09-06 12:13:43,209: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:13:43,236: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:13:43,237: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:13:43,241: INFO: common : created directory at: artifacts]
+[2025-09-06 12:13:43,241: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:13:44,625: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:13:52,183: ERROR: main : INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 52, in log_into_mlflow
+    mlflow.sklearn.log_model(
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\main.py", line 54, in <module>
+    obj.intitate_model_evaluation_pipeline()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\pipeline\model_evaluation_pipeline.py", line 14, in intitate_model_evaluation_pipeline
+    model_evaluation.log_into_mlflow()
+  File "D:\data science and AI\2. MLOPS COURSE BY KRISH\14. First Project\byme\datascineceproject\src\datascience\components\model_evaluation.py", line 60, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\anaconda3\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-09-06 12:18:25,889: INFO: utils : NumExpr defaulting to 8 threads.]
+[2025-09-06 12:18:28,848: INFO: main : >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-06 12:18:28,852: INFO: common : created directory at: artifacts]
+[2025-09-06 12:18:28,852: INFO: common : created directory at: artifacts/data_ingestion]
+[2025-09-06 12:18:28,853: INFO: data_ingestion : File already exists]
+[2025-09-06 12:18:28,855: INFO: main : >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:18:28,856: INFO: main : >>>>>> stage Data Validation stage started <<<<<<]
+[2025-09-06 12:18:28,861: INFO: common : created directory at: artifacts]
+[2025-09-06 12:18:28,862: INFO: common : created directory at: artifacts/data_validation]
+[2025-09-06 12:18:28,868: INFO: main : >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:18:28,868: INFO: main : >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-06 12:18:28,874: INFO: common : created directory at: artifacts]
+[2025-09-06 12:18:28,875: INFO: common : created directory at: artifacts/data_transformation]
+[2025-09-06 12:18:28,901: INFO: data_transformation : Splited data into training and test sets]
+[2025-09-06 12:18:28,901: INFO: data_transformation : (1199, 12)]
+[2025-09-06 12:18:28,902: INFO: data_transformation : (400, 12)]
+[2025-09-06 12:18:28,902: INFO: main : >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:18:28,902: INFO: main : >>>>>> stage Model Training stage started <<<<<<]
+[2025-09-06 12:18:28,907: INFO: common : created directory at: artifacts]
+[2025-09-06 12:18:28,907: INFO: common : created directory at: artifacts/model_trainer]
+[2025-09-06 12:18:28,936: INFO: main : >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
+[2025-09-06 12:18:28,937: INFO: main : >>>>>> stage Model Evaluation stage started <<<<<<]
+[2025-09-06 12:18:28,941: INFO: common : created directory at: artifacts]
+[2025-09-06 12:18:28,942: INFO: common : created directory at: artifacts/model_evaluation]
+[2025-09-06 12:18:30,403: INFO: common : json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-09-06 12:18:49,238: INFO: main : >>>>>> stage Model Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-09-06 14:49:02,597: INFO: _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://127.0.0.1:8000]
+[2025-09-06 14:49:02,598: INFO: _internal : [33mPress CTRL+C to quit[0m]
+[2025-09-06 14:49:20,233: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:20] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:49:20,305: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:20] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 14:49:20,442: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:20] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:49:20,606: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-09-06 14:49:36,677: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:36] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:49:36,720: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:36] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:49:48,226: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:48] "[33mGET /result HTTP/1.1[0m" 404 -]
+[2025-09-06 14:49:48,283: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:49:48] "[33mGET /result HTTP/1.1[0m" 404 -]
+[2025-09-06 14:50:09,250: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:09] "[33mGET /result HTTP/1.1[0m" 404 -]
+[2025-09-06 14:50:09,279: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:09] "[33mGET /result HTTP/1.1[0m" 404 -]
+[2025-09-06 14:50:14,526: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:14] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:50:14,577: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:14] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 14:50:14,579: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:14] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:50:46,693: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:46] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:50:46,740: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:50:46] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:53:30,277: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:53:30] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:53:30,309: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:53:30] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:53:45,865: INFO: _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.25.182.130:8000]
+[2025-09-06 14:53:45,865: INFO: _internal : [33mPress CTRL+C to quit[0m]
+[2025-09-06 14:53:50,726: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:53:50] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:53:50,836: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:53:50] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:53:50,837: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:53:50] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 14:54:09,680: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:54:09] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:54:09,752: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:54:09] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:58:00,893: INFO: _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.25.182.130:8000]
+[2025-09-06 14:58:00,894: INFO: _internal : [33mPress CTRL+C to quit[0m]
+[2025-09-06 14:58:03,419: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:03] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:58:03,888: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:03] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 14:58:03,890: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:03] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:58:25,187: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:25] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:58:25,234: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:25] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:58:34,897: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:34] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:58:34,935: INFO: _internal : 127.0.0.1 - - [06/Sep/2025 14:58:34] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 14:59:06,617: INFO: _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.25.182.130:8000]
+[2025-09-06 14:59:06,618: INFO: _internal : [33mPress CTRL+C to quit[0m]
+[2025-09-06 14:59:13,801: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:13] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:59:13,890: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:13] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 14:59:13,891: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:13] "GET / HTTP/1.1" 200 -]
+[2025-09-06 14:59:14,206: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-09-06 14:59:33,034: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:33] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 14:59:33,097: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 14:59:33] "GET /predict HTTP/1.1" 200 -]
+[2025-09-06 15:02:21,618: INFO: _internal : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.25.182.130:8000]
+[2025-09-06 15:02:21,619: INFO: _internal : [33mPress CTRL+C to quit[0m]
+[2025-09-06 15:02:26,276: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 15:02:26] "GET / HTTP/1.1" 200 -]
+[2025-09-06 15:02:26,822: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 15:02:26] "GET / HTTP/1.1" 200 -]
+[2025-09-06 15:02:26,829: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 15:02:26] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-09-06 15:02:46,646: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 15:02:46] "POST /predict HTTP/1.1" 200 -]
+[2025-09-06 15:02:46,694: INFO: _internal : 10.25.182.130 - - [06/Sep/2025 15:02:46] "GET /predict HTTP/1.1" 200 -]
